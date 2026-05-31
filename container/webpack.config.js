@@ -1,6 +1,6 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
-module.exports = {
+export default {
     mode: "development",
     devServer: {
         port: 8080
