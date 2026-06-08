@@ -17,7 +17,7 @@ export default {
             name: "cart",
             filename: "remoteEntry.js",
             exposes: {
-                "./CartIndex": "./src/index.js"
+                "./CartShow": "./src/index.js"
             }
         }),
         new HtmlWebpackPlugin({
