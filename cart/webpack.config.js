@@ -7,14 +7,17 @@ export default {
     mode: "development",
     entry: "./src/index.js",
     devServer: {
-        port: 8080
+        port: 8082,
+        headers: {
+            "Access-Control-Allow-Origin": "*"
+        }
     },
     plugins: [
         new ModuleFederationPlugin({
-            name: "container",
-            remotes: {
-                products: "products@http://localhost:8081/remoteEntry.js",
-                cart: "cart@http://localhost:8082/remoteEntry.js"
+            name: "cart",
+            filename: "remoteEntry.js",
+            exposes: {
+                "./CartShow": "./src/index.js"
             }
         }),
         new HtmlWebpackPlugin({
