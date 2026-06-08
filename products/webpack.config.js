@@ -18,7 +18,8 @@ export default {
             filename: "remoteEntry.js",
             exposes: {
                 "./ProductsIndex": "./src/index.js"
-            }
+            },
+            shared: ["@faker-js/faker"]
         }),
         new HtmlWebpackPlugin({
             template: "./public/index.html"
