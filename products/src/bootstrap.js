@@ -9,7 +9,7 @@ function mount(element) {
 /*
  * context/situation #1
  * we are running this file in development isolation
- * we are using our local index.html file which DEFINITELY has an element with an id of "dev-products"
+ * we are using our local index.html file which DEFINITELY has an element with an id of "dev-products-dev-only"
  * we want to immediately render our app into that element
  */
 if(process.env.NODE_ENV === "development") {
@@ -25,7 +25,7 @@ if(process.env.NODE_ENV === "development") {
 /*
  * context/situation #2
  * we are running this file in development or production through the CONTAINER app
- * NO GUARANTEE that an element with an id of "dev-products" exists
+ * NO GUARANTEE that an element with an id of "dev-products-dev-only" exists
  * WE DO NOT WANT TO try to immediately render the app
  */
 export { mount };
