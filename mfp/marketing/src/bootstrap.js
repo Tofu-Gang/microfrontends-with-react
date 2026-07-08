@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./App";
 
 // Mount function to start up the app
 function mount(element) {
     ReactDOM.render(
-        <h1>mfp/marketing/src/bootstrap.js: Hi there!</h1>,
-        element
+        <App />, element
     );
 }
 
